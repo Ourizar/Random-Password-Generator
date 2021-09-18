@@ -192,68 +192,7 @@ var uppercase = window.confirm(upCaseQ);
        return result;
     
       }      
-// var special = window.confirm(specQ)
-// console.log(special);
-
-//     if(special===true){ 
-//     console.log(special);
-//     }else{
-//       console.log(special)
-//     }
-
-// var number = window.confirm(numQ)
-// console.log(number);
-
-//     if(special===true){ 
-//     console.log(number);
-//     }else{
-//       console.log(number)
-//     }
-
-// var uppercase = window.confirm(upCaseQ)
-// console.log(uppercase);
-
-//     if(special===true){ 
-//     console.log(uppercase);
-//     }else{
-//       console.log(uppercase)
-//     }
-
-
-
-
-  } //End generatePassword function
-
-
-
-
-
-
-
-
-
-
-    // special characters?
-    // if (userchoice < 128 && userchoice > 7) {  
-    //   //&& isNaN(userchoice)
-    //   console.log(userchoice);
-    //   userchoice = window.confirm("Do you want to include special characters?");
-    //   console.log(userchoice);
-    // } else {
-    //   window.alert("Please choose a number between 8 and 128 characters.");
-    //   return;
-    // }  
-    // Numbers?
-    // if (userchoice < 128 && userchoice > 7) {  
-    //   //&& isNaN(userchoice)
-    //   console.log(userchoice);
-    //   userchoice = window.confirm("Do you want to include special characters?");
-    //   console.log(userchoice);
-    // } else {
-    //   window.alert("Please choose a number between 8 and 128 characters.");
-    //   return;
-    // }  
-    
+  } 
 
 
 // Write password to the #password input
@@ -267,18 +206,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
-
-//  random password  generator with no prompts- use as reference
-function makeid(length) {
-  var result           = '';
-  var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
-  var charactersLength = characters.length;
-  for ( var i = 0; i < length; i++ ) {
-    result += characters.charAt(Math.floor(Math.random() * 
-charactersLength));
- }
-
- return result;
-}
-
-console.log(makeid());
