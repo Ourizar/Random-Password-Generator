@@ -173,6 +173,25 @@ var uppercase = window.confirm(upCaseQ);
        return result;
     
       } 
+
+      if(!special && !number && !uppercase){
+        var combinedArray = everything.concat(noCaps);
+        console.log(noCaps);
+        console.log(combinedArray.toString());
+        var noComma = combinedArray.toString();
+        console.log('replace comma please',noComma.replace(/,/g, ''));
+    
+        var result           = '';
+        var characters       = noComma.replace(/,/g, '');
+        var charactersLength = characters.length;
+        for ( var i = 0; i < userchoice; i++ ) {
+          result += characters.charAt(Math.floor(Math.random() * 
+      charactersLength));
+       }
+      
+       return result;
+    
+      }      
 // var special = window.confirm(specQ)
 // console.log(special);
 
