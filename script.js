@@ -1,6 +1,4 @@
-//Alert prompt and confirm prompt are very important
-//hint for special characters
-var allCharacters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+';
+// arrays used for multiple conditions
 var noCaps = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var caps = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z","a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 var numb = ["0","1","2","3","4","5,","6", "7","8","9"]
@@ -23,15 +21,11 @@ var upCaseQ = "Do you want to use capital letters?";
     // 3. "Generate password"
     // 4. "Display the password on the page"
 
-        // userchoice = window.confirm("Do you want to include special characters?");
-      // console.log(userchoice);
-      // userchoice = window.confirm("Do you want to include numbers?");
-      // console.log(userchoice);
-      // userchoice = window.confirm("Do you want to include upper case letters?");
+//This function will generate the password
 function generatePassword(){
   console.log("You clicked the button");
    
-
+// This will ask the users for number of characters.
 var userchoice = window.prompt(howLong)
 
 console.log(userchoice);
@@ -42,12 +36,13 @@ console.log(userchoice);
       window.alert("Please choose a number between 8 and 128 characters.");
       return "Please start over. Click Generate Password.";
     }     
-      // userchoice = window.prompt ("How many characters do you want your password to be?");
-
+      
+// Message displays asking if user wants to use special characters, numbers, and Upper case letters
 var special = window.confirm(specQ);
 var number = window.confirm(numQ);
 var uppercase = window.confirm(upCaseQ);
 
+// The following IF functions will return a value based on the users input for the capital letters, numbers, and special characters. It will also take the users input on character length to use as length of the for loop.
     if(special && number && uppercase){
     var combinedArray = everything.concat(specChar, numb, caps);
     console.log(combinedArray.toString());
